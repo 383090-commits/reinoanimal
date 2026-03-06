@@ -1,4 +1,4 @@
-package paqAnimales;
+package es.cifpcarlosiii.ed1damdist.tarea4;
 
 public class Principal {
 
@@ -15,28 +15,26 @@ Esquema de clases de reino-animal
           Perro          Gato
 */
 
+        Animal animal = new Animal("Gallopedro");
 
-        Animal ani = new Animal();
+        Mamifero mamifero = new Mamifero("Ballena");
 
-        Mamifero mami = new Mamifero();
+        Perro pompon = new Perro("Pompon");
 
-        Perro toby = new Perro();
+        Gato nube = new Gato("Nube", 4);
 
-        Gato isidoro = new Gato();
-        isidoro.pelos = 4;
-
-        ani = isidoro;
+        animal = nube;
 
         Gato g;
-        g = (Gato) ani;
-        System.out.println("pelos de gato: " + g.pelos);
+        g = (Gato) animal;
+        System.out.println("pelos de gato: " + g.getPelos());
 
         Animal array[] = new Animal[4];
 
-        array[0] = ani;
-        array[1] = mami;
-        array[2] = toby;
-        array[3] = isidoro;
+        array[0] = animal;
+        array[1] = mamifero;
+        array[2] = pompon;
+        array[3] = nube;
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] instanceof Perro) {
@@ -54,5 +52,10 @@ Esquema de clases de reino-animal
             }
         }
 
+        // Ejemplos de uso de toString() heredado
+        System.out.println("Nombre del perro: " + pompon.toString());
+        System.out.println("Nombre del gato: " + nube.toString());
+        System.out.println("Nombre del mamífero: " + mamifero.toString());
+        System.out.println("Nombre del animal: " + animal.getNombre());
     }
 }
