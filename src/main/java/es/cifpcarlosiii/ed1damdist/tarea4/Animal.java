@@ -1,10 +1,14 @@
 package es.cifpcarlosiii.ed1damdist.tarea4;
 
+/**
+ * Clase Animal - es la clase padre de todos los animales
+ */
 public class Animal {
 
+    // Atributo pvt para nombre
     private String nombre;
 
-    // Constructor vacío
+    // Constructor vacio
     public Animal() {
     }
 
@@ -13,7 +17,16 @@ public class Animal {
         this.nombre = nombre;
     }
 
+    // Getters y setters
+    public String getNombre() {
+        return nombre;
+    }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Metodos de animal
     void comer() {
         System.out.println("Necesita comer diarimente para sobrevivir");
     }
@@ -30,16 +43,9 @@ public class Animal {
         System.out.println("Con el animal: " + a.getNombre());
     }
 
+    // toString que devuelve el nombre
     @Override
     public String toString() {
-        return this.getNombre();
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+        return this.nombre;
     }
 }
